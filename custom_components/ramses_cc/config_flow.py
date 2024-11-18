@@ -37,6 +37,7 @@ from ramses_tx.schemas import (
     SZ_KNOWN_LIST,
     SZ_PACKET_LOG,
     SZ_PORT_NAME,
+    SZ_BAUDRATE,
     SZ_ROTATE_BACKUPS,
     SZ_ROTATE_BYTES,
     SZ_SERIAL_PORT,
@@ -178,6 +179,7 @@ class BaseRamsesFlow(FlowHandler):
             if not errors:
                 if SZ_PORT_NAME in user_input:
                     config[SZ_PORT_NAME] = user_input[SZ_PORT_NAME]
+                    config[SZ_BAUDRATE] = 57600
                 else:
                     config[SZ_PORT_NAME] = self.options[SZ_SERIAL_PORT][SZ_PORT_NAME]
                 self.options[SZ_SERIAL_PORT] = config

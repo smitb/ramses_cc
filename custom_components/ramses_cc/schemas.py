@@ -32,6 +32,7 @@ from ramses_tx.schemas import (
     SCH_ENGINE_DICT,
     SZ_PORT_CONFIG,
     SZ_SERIAL_PORT,
+    SZ_BAUDRATE,
     extract_serial_port,
     sch_global_traits_dict_factory,
     sch_packet_log_dict_factory,
